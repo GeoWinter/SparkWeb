@@ -6,7 +6,7 @@
   <style>
     button{
       font-family: "Times New Roman";
-      border: 3px solid;
+      border: none;
       background-color: white;
       font-size: 80px;
     }
@@ -63,10 +63,16 @@
         Nothing
       </p>
     </div>
-    <button type="button">> Simbol</button><hr>
+    <button id="simbolButton" type="button" onclick="c1on()">> Simbol</button><hr>
+    <div id="txt2">
+      <p style="font-family='Linux Libertine'">
+        Nothing
+      </p>
+    </div>
   </div>
   <script>
     let c1 = 0;
+    let c2 = 0;
     
     function c1on(){
       c1 += 1;
@@ -80,6 +86,19 @@
       if(c1 == 1){
         document.getElementById("txt1").style.display = "block";
         document.getElementById("perubahanButton").innerHTML = "< Perubahan";
+      }
+    }
+    function c1on(){
+      c2 += 1;
+      if(c2 > 1){
+        c2 = 0;
+      }
+      if(c2 == 0){
+        document.getElementById("txt2").style.display = "none";
+        document.getElementById("simbolButton").innerHTML = "> Simbol";
+      if(c2 == 1){
+        document.getElementById("txt2").style.display = "block";
+        document.getElementById("simbolButton").innerHTML = "< Perubahan";
       }
     }
   </script>
