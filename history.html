@@ -8,11 +8,7 @@
       font-family: "Times New Roman";
       border: none;
       background-color: white;
-      font-size: 100px;
-    }
-    button span{
-      font-family: "Arial";
-      color:grey;
+      font-size: 80px;
     }
     p{
       font-size: 15px;
@@ -61,13 +57,13 @@
       <br><br><hr>
   </div>
   <div style="margin-left:20px; margin-right:20px; position:relative; bottom:50px">
-    <button type="button" onclick="c1on()"><span>v</span> Perubahan</button><hr>
+    <button id="perubahanButton" type="button" onclick="c1on()">> Perubahan</button><hr>
     <div id="txt1">
       <p style="font-family:'Linux Libertine'">
         Nothing
       </p>
     </div>
-    <button type="button"><span>v</span> Simbol</button><hr>
+    <button type="button">> Simbol</button><hr>
   </div>
   <script>
     let c1 = 0;
@@ -79,9 +75,11 @@
       }
       if(c1 == 0){
         document.getElementById("txt1").style.display = "none";
+        document.getElementById("perubahanButton").innerHTML = "> Perubahan";
       }
       if(c1 == 1){
         document.getElementById("txt1").style.display = "block";
+        document.getElementById("perubahanButton").innerHTML = "< Perubahan";
       }
     }
   </script>
